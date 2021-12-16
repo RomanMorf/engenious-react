@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/engenious-react/static/css/main.7b827de5.css",
+    "main.js": "/engenious-react/static/js/main.a82a2709.js",
+    "index.html": "/engenious-react/index.html",
+    "main.7b827de5.css.map": "/engenious-react/static/css/main.7b827de5.css.map",
+    "main.a82a2709.js.map": "/engenious-react/static/js/main.a82a2709.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b827de5.css",
+    "static/js/main.a82a2709.js"
+  ]
+}
