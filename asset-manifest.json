@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/RomanMorf/engenious-react/static/css/main.7b9f475f.css",
-    "main.js": "/RomanMorf/engenious-react/static/js/main.8dca28ee.js",
-    "index.html": "/RomanMorf/engenious-react/index.html",
-    "main.7b9f475f.css.map": "/RomanMorf/engenious-react/static/css/main.7b9f475f.css.map",
-    "main.8dca28ee.js.map": "/RomanMorf/engenious-react/static/js/main.8dca28ee.js.map"
+    "main.css": "/engenious-react/static/css/main.7b9f475f.css",
+    "main.js": "/engenious-react/static/js/main.8dca28ee.js",
+    "index.html": "/engenious-react/index.html",
+    "main.7b9f475f.css.map": "/engenious-react/static/css/main.7b9f475f.css.map",
+    "main.8dca28ee.js.map": "/engenious-react/static/js/main.8dca28ee.js.map"
   },
   "entrypoints": [
     "static/css/main.7b9f475f.css",
