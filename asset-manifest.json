@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/engenious-react/build/static/css/main.7b827de5.css",
-    "main.js": "/engenious-react/build/static/js/main.a82a2709.js",
-    "index.html": "/engenious-react/build/index.html",
-    "main.7b827de5.css.map": "/engenious-react/build/static/css/main.7b827de5.css.map",
-    "main.a82a2709.js.map": "/engenious-react/build/static/js/main.a82a2709.js.map"
+    "main.css": "/RomanMorf/engenious-react/static/css/main.7b9f475f.css",
+    "main.js": "/RomanMorf/engenious-react/static/js/main.8dca28ee.js",
+    "index.html": "/RomanMorf/engenious-react/index.html",
+    "main.7b9f475f.css.map": "/RomanMorf/engenious-react/static/css/main.7b9f475f.css.map",
+    "main.8dca28ee.js.map": "/RomanMorf/engenious-react/static/js/main.8dca28ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b827de5.css",
-    "static/js/main.a82a2709.js"
+    "static/css/main.7b9f475f.css",
+    "static/js/main.8dca28ee.js"
   ]
 }
