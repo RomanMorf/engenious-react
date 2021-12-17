@@ -1,0 +1,75 @@
+.btn {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 1px solid blue;
+  transition: background-color 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.add {
+    background-color: rgb(196, 196, 3);
+    &::before {
+      content: '';
+      width: 20px;
+      height: 5px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      position: absolute;
+    }
+    &::after {
+      content: '';
+      width: 20px;
+      height: 5px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      transform: rotate(90deg);
+      position: absolute;
+    }
+    &:hover {
+      background-color: rgba(196, 196, 3, 0.5);
+    }
+  }
+
+  &.del {
+    background-color: rgb(182, 2, 2);
+    opacity: 0;
+    z-index: -1;
+    top: -95px;
+    left: -95px;
+
+    &.hovered {
+      opacity: 1;
+      z-index: 10;
+      &:hover {
+        background-color: rgba(182, 2, 2, 0.5);
+      }
+    }
+    &::before {
+      content: '';
+      width: 20px;
+      height: 5px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      position: absolute;
+    }
+    &.del-row {
+      transition: top .3s ease, background-color 1s ease;
+    } 
+    &.del-col {
+      transition: left .3s ease, background-color 1s ease;
+    }
+  }
+
+  &.add-col {
+    right: -95px;
+    top: 14px;
+  }
+  &.add-row {
+    bottom: -95px;
+    left: 14px;
+  }
+}
+
