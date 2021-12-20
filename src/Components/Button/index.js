@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import GlobalContext from '../../Context/GlobalContext'
+import ButtonsContext from "../../Context/ButtonsContext";
 import './index.scss'
 
 function Button(props) {
-  const {btnHandle, showColBtnFlag, showRowBtnFlag} = useContext(GlobalContext)
+  const {btnHandle, showColBtnFlag, showRowBtnFlag, styleForBtn} = useContext(ButtonsContext)
 
   function RenderButton () {
     switch (props.btnValue.name) {
@@ -12,7 +12,7 @@ function Button(props) {
           <button 
             className={`${props.btnValue.class} ${showColBtnFlag? props.btnValue.showClass : ''}`} 
             onClick={()=> btnHandle(props.btnValue.actionKey, props.btnValue.actionType)}
-            style={props.btnStyle.delColBtn}
+            style={styleForBtn.delColBtn}
           />
         )
 
@@ -21,7 +21,7 @@ function Button(props) {
           <button 
             className={`${props.btnValue.class} ${showRowBtnFlag? props.btnValue.showClass : ''}`} 
             onClick={()=> btnHandle(props.btnValue.actionKey, props.btnValue.actionType)}
-            style={props.btnStyle.delRowBtn}
+            style={styleForBtn.delRowBtn}
           />
         )
 

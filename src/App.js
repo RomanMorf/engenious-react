@@ -1,5 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useMemo} from "react";
 import GlobalContext from "./Context/GlobalContext";
+import ButtonsContext from "./Context/ButtonsContext";
 import Table from "./Components/Table";
 import Button from "./Components/Button";
 
@@ -9,7 +10,7 @@ function App() {
     rows: 4,
   })
 
-  const [buttons, setButtons] = useState([
+  const [buttons] = useState([
     {name: 'createCol', class: 'btn add add-col', actionKey: 'cols', actionType: 'plus'},
     {name: 'createRow', class: 'btn add add-row', actionKey: 'rows', actionType: 'plus'},
     {name: 'deleteCol', class: 'btn del del-col', actionKey: 'cols', actionType: 'min', showClass: 'hovered'},
@@ -77,20 +78,27 @@ function App() {
     setShowRowBtnFlagBtn(false)
   }
 
+  const btnValue = useMemo(
+    () => ({ btnHandle, showColBtnFlag, showRowBtnFlag, styleForBtn}),
+    [showColBtnFlag, showRowBtnFlag, styleForBtn]
+  );
+
 
   return (
-    <GlobalContext.Provider value = {{field, btnHandle, showColBtnFlag, showRowBtnFlag}}>
       <div className="container">
         <div className="field" onMouseOver={changeBtnDelPosition} onMouseLeave={hideBtnDel}>
-          <Table/>
+          <GlobalContext.Provider value = {{ field }}>
+            <Table/>
+          </GlobalContext.Provider>
 
-          {buttons.map(btnData => (
-            <Button btnValue={btnData} btnStyle={styleForBtn} key={btnData.name} />
-          ))}
+          <ButtonsContext.Provider value={btnValue}>
+            {buttons.map(btnData => (
+              <Button btnValue={btnData} key={btnData.name} />
+            ))}
+          </ButtonsContext.Provider>
 
         </div>
       </div>
-    </GlobalContext.Provider>
   );
 }
 
